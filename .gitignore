@@ -10,7 +10,7 @@
 
 ############ Various settings ############
 *.xcodeproj
-!Nextcloud.xcodeproj
+!lovogorden.xcodeproj
 xcuserdata/
 README.md
 Documentation/
