@@ -22,8 +22,8 @@
 //
 
 // Brand
-#define k_brand                         @"Nextcloud"
-#define k_mailMe                        @"ios@nextcloud.com"
+#define k_brand                         @"LOV & ORDEN"
+#define k_mailMe                        @"admin@lovogorden.no"
 #define k_textCopyright                 @"Nextcloud %@ © 2017 T.W.S. Inc."
 #define k_loginBaseUrl                  @"https://cloud.twsweb.it"
 #define k_pushNotificationServer        @"https://push-notifications.nextcloud.com"
@@ -31,7 +31,7 @@
 #define k_webLoginAutenticationProtocol @""
 
 // Capabilities Group
-#define k_capabilitiesGroups            @"group.it.twsweb.Crypto-Cloud"
+#define k_capabilitiesGroups            @"group.no.lovogorden.drive"
 
 /* Define option compiler */
 
