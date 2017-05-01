@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4IE-mo-rkp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4IE-mo-rkp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,10 +78,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="zQQ-52-W9I" customClass="CCCellMore" customModule="Nextcloud" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zQQ-52-W9I" id="Zho-os-HYj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RZt-EQ-32U">
@@ -483,6 +483,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vxw-dW-rgx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -493,11 +494,11 @@
             </objects>
             <point key="canvasLocation" x="4626" y="2407"/>
         </scene>
-        <!--File-->
+        <!--Filer-->
         <scene sceneID="dMv-43-hWy">
             <objects>
                 <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="bSZ-tE-FEj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="File" image="fileNextcloud" id="Zxv-aS-HGF"/>
+                    <tabBarItem key="tabBarItem" title="Filer" image="fileNextcloud" id="Zxv-aS-HGF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cj6-rT-wnB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -512,11 +513,11 @@
             </objects>
             <point key="canvasLocation" x="5215" y="327"/>
         </scene>
-        <!--Favorites-->
+        <!--Klienter-->
         <scene sceneID="YSr-JF-a0V">
             <objects>
                 <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="hwM-4d-Afb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="tabBarFavorite" id="o09-67-hwf"/>
+                    <tabBarItem key="tabBarItem" title="Klienter" image="avatar" selectedImage="avatar" id="o09-67-hwf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MJw-Bn-5le">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -584,11 +585,11 @@
             </objects>
             <point key="canvasLocation" x="7934" y="1218"/>
         </scene>
-        <!--Photos-->
+        <!--Foto-->
         <scene sceneID="IuY-Iu-oAm">
             <objects>
                 <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="Npr-vu-PSD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Photos" image="tabBarPhotos" id="5cw-bP-7It"/>
+                    <tabBarItem key="tabBarItem" title="Foto" id="5cw-bP-7It"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ixg-Pw-TNO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -622,11 +623,11 @@
             </objects>
             <point key="canvasLocation" x="7935" y="327"/>
         </scene>
-        <!--More-->
+        <!--Mer-->
         <scene sceneID="4RE-f1-SKU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Z8-Bx-Dqo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="tabBarMore" id="U4f-qS-cgh"/>
+                    <tabBarItem key="tabBarItem" title="Mer" image="tabBarMore" id="U4f-qS-cgh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yVo-p8-ApS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -814,9 +815,7 @@
         <image name="avatar" width="25" height="25"/>
         <image name="fileNextcloud" width="25" height="25"/>
         <image name="nextcloud_lite" width="223" height="157"/>
-        <image name="tabBarFavorite" width="25" height="25"/>
         <image name="tabBarMore" width="25" height="25"/>
-        <image name="tabBarPhotos" width="25" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="op6-ow-K8v"/>

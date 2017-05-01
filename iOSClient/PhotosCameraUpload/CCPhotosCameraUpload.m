@@ -293,7 +293,9 @@
     if ([CCCoreData getCameraUploadActiveAccount:app.activeAccount])
         text = [NSString stringWithFormat:@"\n%@", NSLocalizedString(@"_tutorial_photo_view_", nil)];
     else
-        text = [NSString stringWithFormat:@"\n%@\n", NSLocalizedString(@"_tutorial_camera_upload_view_", nil)];
+        text = [NSString stringWithFormat:@"\n%@\n", NSLocalizedString(@"Her kommer timeføring", nil)];
+    
+    //text = [NSString stringWithFormat:@"\n%@\n", NSLocalizedString(@"_tutorial_camera_upload_view_", nil)];
     
     NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:14.0], NSForegroundColorAttributeName: [UIColor lightGrayColor], NSParagraphStyleAttributeName: paragraph};
 
@@ -304,7 +306,10 @@
 {
     if ([CCCoreData getCameraUploadActiveAccount:app.activeAccount] == NO) {
     
-        return [CCUtility drawText:NSLocalizedString(@"_activate_camera_upload_", nil) inImage:[UIImage imageNamed:image_buttonBlu] colorText:[UIColor whiteColor]];        
+        //GS: Removed
+        return nil;
+        
+        //return [CCUtility drawText:NSLocalizedString(@"_activate_camera_upload_", nil) inImage:[UIImage imageNamed:image_buttonBlu] colorText:[UIColor whiteColor]];
         
     } else return nil;
 }

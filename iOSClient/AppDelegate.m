@@ -834,15 +834,15 @@
     
     // File
     item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexFile];
-    [item setTitle:NSLocalizedString(@"_home_", nil)];
+    [item setTitle:NSLocalizedString(@"Filer", nil)];
     item.image = [UIImage imageNamed:image_tabBarFiles];
     item.selectedImage = [UIImage imageNamed:image_tabBarFiles];
     
     // Favorites
     item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexOffline];
-    [item setTitle:NSLocalizedString(@"_favorites_", nil)];
-    item.image = [UIImage imageNamed:image_tabBarFavorite];
-    item.selectedImage = [UIImage imageNamed:image_tabBarFavorite];
+    [item setTitle:NSLocalizedString(@"Klienter", nil)];
+    item.image = [UIImage imageNamed:image_avatar];
+    item.selectedImage = [UIImage imageNamed:image_avatar];
     
     // Hide (PLUS)
     item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexHide];
@@ -852,13 +852,13 @@
     
     // Photos
     item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexPhotos];
-    [item setTitle:NSLocalizedString(@"_photo_camera_", nil)];
-    item.image = [UIImage imageNamed:image_tabBarPhotos];
-    item.selectedImage = [UIImage imageNamed:image_tabBarPhotos];
+    [item setTitle:NSLocalizedString(@"Tid", nil)];
+    item.image = [UIImage imageNamed:image_stopWatch];
+    item.selectedImage = [UIImage imageNamed:image_stopWatch];
     
     // More
     item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexMore];
-    [item setTitle:NSLocalizedString(@"_more_", nil)];
+    [item setTitle:NSLocalizedString(@"Mer", nil)];
     item.image = [UIImage imageNamed:image_tabBarMore];
     item.selectedImage = [UIImage imageNamed:image_tabBarMore];
     

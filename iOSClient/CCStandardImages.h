@@ -33,6 +33,7 @@
 #define image_actionSheetLocal                  @"localStorage"
 #define image_actionSheetRemoveLocal            @"actionSheetRemoveLocal"
 #define image_avatar                            @"avatar"
+#define image_stopWatch                         @"stopWatch"
 
 #define image_bkfull                            @"bkfull"
 #define image_bkempty                           @"bkempty"

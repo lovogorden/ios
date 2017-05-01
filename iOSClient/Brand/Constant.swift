@@ -29,21 +29,38 @@ class Constant: NSObject {
         
         // GLOBLE COLOR DEFINE
         
-        static let k_Color_Brand: UIColor = UIColor(red: 0.0/255.0, green: 130.0/255.0, blue: 201.0/255.0, alpha: 1.0)              // BLU NC : #0082c9
+        static let k_Color_Brand: UIColor = UIColor(red: 254.0/255.0, green: 125.0/255.0, blue: 125.0/255.0, alpha: 1.0)              // BLU NC : #0082c9
 
-        static let k_Color_Nextcloud: UIColor = UIColor(red: 0.0/255.0, green: 130.0/255.0, blue: 201.0/255.0, alpha: 1.0)          // BLU NC : #0082c9
+        static let k_Color_Nextcloud: UIColor = UIColor(red: 254.0/255.0, green: 254.0/255.0, blue: 0.0/255.0, alpha: 1.0)          // BLU NC : #0082c9
 
-        static let k_Color_Seperator: UIColor = UIColor(red: 235.0/255.0, green: 235.0/255.0, blue: 235.0/255.0, alpha: 1.0)
+        static let k_Color_Seperator: UIColor = UIColor(red: 254.0/255.0, green: 254.0/255.0, blue: 254.0/255.0, alpha: 1.0)
         
         static let k_Color_Cryptocloud: UIColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 34.0/255.0, alpha: 1.0)
         
-        static let k_Color_SelectBackgrond: UIColor = UIColor(red: 0.0/255.0, green: 130.0/255.0, blue: 201.0/255.0, alpha: 0.1)    // BLU NC : #0082c9
+        static let k_Color_SelectBackgrond: UIColor = UIColor(red: 254.0/255.0, green: 130.0/255.0, blue: 201.0/255.0, alpha: 0.1)    // BLU NC : #0082c9
         
-        static let k_Color_NavigationBar: UIColor = UIColor(red: 0.0/255.0, green: 130.0/255.0, blue: 201.0/255.0, alpha: 1.0)      // BLU NC : #0082c9
+        static let k_Color_NavigationBar: UIColor = UIColor(red: 254.0/255.0, green: 130.0/255.0, blue: 0.0/255.0, alpha: 1.0)      // BLU NC : #0082c9
+        
+//        
+//        // GLOBLE COLOR DEFINE
+//        
+//        static let k_Color_Brand: UIColor = UIColor(red: 0.0/255.0, green: 130.0/255.0, blue: 201.0/255.0, alpha: 1.0)              // BLU NC : #0082c9
+//        
+//        static let k_Color_Nextcloud: UIColor = UIColor(red: 0.0/255.0, green: 130.0/255.0, blue: 201.0/255.0, alpha: 1.0)          // BLU NC : #0082c9
+//        
+//        static let k_Color_Seperator: UIColor = UIColor(red: 235.0/255.0, green: 235.0/255.0, blue: 235.0/255.0, alpha: 1.0)
+//        
+//        static let k_Color_Cryptocloud: UIColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 34.0/255.0, alpha: 1.0)
+//        
+//        static let k_Color_SelectBackgrond: UIColor = UIColor(red: 0.0/255.0, green: 130.0/255.0, blue: 201.0/255.0, alpha: 0.1)    // BLU NC : #0082c9
+//        
+//        static let k_Color_NavigationBar: UIColor = UIColor(red: 0.0/255.0, green: 130.0/255.0, blue: 201.0/255.0, alpha: 1.0)      // BLU NC : #0082c9
+//        
+        
         
         static let k_Color_NavigationBar_Text: UIColor = UIColor.white
         
-        static let k_Color_Anthracite: UIColor = UIColor(red: 65.0/255.0, green: 64.0/255.0, blue: 66.0/255.0, alpha: 1.0)
+        static let k_Color_Anthracite: UIColor = UIColor(red: 65.0/255.0, green: 64.0/255.0, blue: 0.0/255.0, alpha: 1.0)
         
         static let k_Color_Table_Background: UIColor = UIColor.white
         
