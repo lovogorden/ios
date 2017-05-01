@@ -50,11 +50,15 @@
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(triggerProgressTask:) name:@"NotificationProgressTask" object:nil];
     }
+    
+    printf("initWithCoder()");
     return self;
 }
 
 - (void)viewDidLoad
 {
+    printf("viewDidLoad()");
+    
     [super viewDidLoad];
     
     // Custom Cell
@@ -65,6 +69,7 @@
     
     // Metadata
     _metadata = [CCMetadata new];
+    //_metadata = [self setSelfMetadataFromIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 1)];
     self.tableView.separatorColor = COLOR_SEPARATOR_TABLE;
@@ -80,7 +85,16 @@
     if (_titleViewControl)
         self.title = _titleViewControl;
     else
-        self.title = NSLocalizedString(@"_favorites_", nil);
+        self.title = NSLocalizedString(@"Klienter", nil);
+    
+    //Start - Vis Klienter
+    //[self reloadDatasource];
+    //_metadata = [self setSelfMetadataFromIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+    //[self performSegueDirectoryWithControlPasscode]; // looping result
+    //End - Vis Klienter
+    
+    
+    
 }
 
 // Apparirà
@@ -95,17 +109,25 @@
     // Plus Button
     [app plusButtonVisibile:true];
     
+    //_metadata = [self setSelfMetadataFromIndexPath:0];
     [self reloadDatasource];
+
 }
 
 // E' arrivato
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    
+
         
     // update Badge
     [app updateApplicationIconBadgeNumber];
+    
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -253,7 +275,7 @@
 
 - (void)openModel:(CCMetadata *)metadata
 {
-    UIViewController *viewController;
+     UIViewController *viewController;
     NSString *serverUrl = [CCCoreData getServerUrlFromDirectoryID:_metadata.directoryID activeAccount:app.activeAccount];
     
     if ([metadata.model isEqualToString:@"cartadicredito"])
@@ -451,9 +473,13 @@
     NSArray *recordsTableMetadata ;
         
     if (!_serverUrl) {
-            
-        recordsTableMetadata = [CCCoreData  getTableMetadataWithPredicate:[NSPredicate predicateWithFormat:@"(account == %@) AND (favorite == 1)", app.activeAccount] context:nil];
-            
+        //GS: Favorites default
+//        recordsTableMetadata = [CCCoreData  getTableMetadataWithPredicate:[NSPredicate predicateWithFormat:@"(account == %@) AND (favorite == 1)", app.activeAccount] context:nil];
+        
+        
+        NSString *directoryID = [CCCoreData getDirectoryIDFromServerUrl:@"https://drive.lovogorden.no/remote.php/webdav/Klienter" activeAccount:app.activeAccount];
+        recordsTableMetadata = [CCCoreData getTableMetadataWithPredicate:[NSPredicate predicateWithFormat:@"(account == %@) AND (directoryID == %@)", app.activeAccount, directoryID] fieldOrder:[CCUtility getOrderSettings]  ascending:[CCUtility getAscendingSettings]];
+        
     } else {
             
         NSString *directoryID = [CCCoreData getDirectoryIDFromServerUrl:_serverUrl activeAccount:app.activeAccount];
@@ -470,6 +496,34 @@
     
     [self.tableView reloadData];
 }
+
+- (void)reloadDatasourceKlienter
+{
+    NSMutableArray *metadatas = [NSMutableArray new];
+    NSArray *recordsTableMetadata ;
+    
+    if (!_serverUrl) {
+        
+        recordsTableMetadata = [CCCoreData  getTableMetadataWithPredicate:[NSPredicate predicateWithFormat:@"(account == %@) AND (favorite == 1)", app.activeAccount] context:nil];
+        
+    } else {
+        
+        NSString *directoryID = [CCCoreData getDirectoryIDFromServerUrl:@"https://drive.lovogorden.no/remote.php/webdav/Klienter" activeAccount:app.activeAccount];
+        recordsTableMetadata = [CCCoreData getTableMetadataWithPredicate:[NSPredicate predicateWithFormat:@"(account == %@) AND (directoryID == %@)", app.activeAccount, directoryID] fieldOrder:[CCUtility getOrderSettings]  ascending:[CCUtility getAscendingSettings]];
+    }
+    
+    CCSectionDataSourceMetadata *sectionDataSource = [CCSectionMetadata creataDataSourseSectionMetadata:recordsTableMetadata listProgressMetadata:nil groupByField:nil replaceDateToExifDate:NO activeAccount:app.activeAccount];
+    
+    NSArray *fileIDs = [sectionDataSource.sectionArrayRow objectForKey:@"_none_"];
+    for (NSString *fileID in fileIDs)
+        [metadatas addObject:[sectionDataSource.allRecordsDataSource objectForKey:fileID]];
+    
+    dataSource = [NSArray arrayWithArray:metadatas];
+    
+    [self.tableView reloadData];
+}
+
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -571,6 +625,13 @@
 {
     // deselect row
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    int row = indexPath.row;
+    
+    
+    //GS: Working!!
+    //_metadata = [self setSelfMetadataFromIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+
     
     _metadata = [self setSelfMetadataFromIndexPath:indexPath];
     

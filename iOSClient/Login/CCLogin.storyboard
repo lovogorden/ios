@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Gf-Bw-Nim">
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Brukernavn" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Gf-Bw-Nim">
                                 <rect key="frame" x="50" y="200" width="319" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="JYC-15-QFZ"/>
@@ -31,7 +31,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jU7-Iw-XfU">
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Passord" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jU7-Iw-XfU">
                                 <rect key="frame" x="50" y="244" width="273" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="SHB-pM-p1U"/>
@@ -42,7 +42,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQd-pF-3cE">
                                 <rect key="frame" x="-4" y="302" width="383" height="50"/>
-                                <color key="backgroundColor" red="0.2196078431372549" green="0.50196078431372548" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.32702204300898036" green="0.79039831606217614" blue="0.34446277000961539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="S6Y-YG-g6O"/>
                                 </constraints>
@@ -76,7 +76,7 @@
                                     <constraint firstAttribute="width" constant="25" id="glL-CW-aF0"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Server address https://…" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szn-G7-5sK">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://drive.lovogorden.no" placeholder="Server address https://…" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szn-G7-5sK">
                                 <rect key="frame" x="50" y="156" width="273" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="I2v-Zr-IWf"/>
@@ -134,6 +134,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uJf-zK-g43" firstAttribute="leading" secondItem="Bv6-g3-l0M" secondAttribute="leading" id="10n-Pa-zTJ"/>
                             <constraint firstItem="fhk-o9-J0l" firstAttribute="leading" secondItem="oF7-f3-D2I" secondAttribute="leading" id="11w-VB-cde"/>
